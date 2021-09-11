@@ -18,7 +18,7 @@ const RestaurantSchema = new mongoose.Schema({
     },
     menu: {
         type: mongoose.Types.ObjectId,
-        ref: "Images",
+        ref: "Menus",
     },
     reviews: [{type: mongoose.Types.ObjectId, ref: "Reviews"}],
     photos: [{type: mongoose.Types.ObjectId, ref: "Images"}],
