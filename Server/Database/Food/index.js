@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const FoodSchema = new Mongoose.Schema({
+const FoodSchema = new Mongoose.Schema(
+    {
     name: {type: String, require: true},
     descript: {type: String, require: true},
     isVeg: {type: Boolean, require: true},
@@ -20,6 +21,10 @@ const FoodSchema = new Mongoose.Schema({
         ref: "Restaurants",
         required: true,
     },
-});
+}, 
+{
+    timestamps: true,
+}
+);
 
 export const FoodModel = mongoose.model("Foods", FoodSchema);

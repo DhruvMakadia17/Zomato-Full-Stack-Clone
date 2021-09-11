@@ -13,6 +13,10 @@ const ReviewSchema = mongoose.Schema({
         },
     ],
 
-});
+},
+{
+    timestamps: true,
+}
+);
 
 export const ReviewModel  = mongooe.model("reviews", ReviewSchema);
