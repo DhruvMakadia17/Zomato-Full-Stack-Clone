@@ -38,7 +38,7 @@ UserSchema.pre("save", function (next){
     if(!user.isModified("password")) return next();
     
     //generate bcrypt salt
-    bcrypt.genSsalt(8, (error, salt) => {
+    bcrypt.genSalt(8, (error, salt) => {
         if(error) return next(error);
 
         //hash the password
