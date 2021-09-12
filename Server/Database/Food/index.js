@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const FoodSchema = new Mongoose.Schema(
+const FoodSchema = new mongoose.Schema(
     {
     name: {type: String, require: true},
     descript: {type: String, require: true},
@@ -8,16 +8,16 @@ const FoodSchema = new Mongoose.Schema(
     isContainEgg: {type: String, require: true},
     category: {type: String, require: true},
     photos: {
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Images",
     },
     price: {type: Number, default: 150, required: true},
     addOns: [{
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Foods",
     }],
     restaurants: {
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Restaurants",
         required: true,
     },
