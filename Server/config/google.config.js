@@ -9,8 +9,8 @@ export default (passport) => {
         new GoogleStrategy(
             {
                 clientID: process.env.GOOGLE_CLIENT_ID,
-                clientSecrete: process.env.GOOGLE_CLIENT_SECRETE,
-                callbackURL: "http://localhost:4000/auth/google/callback",
+                clientSecrete: process.env.GOOGLE_CLIENT_SECRET,
+                callbackURL: "http://localhost:4000/auth/google/callback"
             }, 
             async (accessToken, refreshToken, profile, done) => 
             {
@@ -28,7 +28,7 @@ export default (passport) => {
                     const token = user.generateJwtToken();
                     if(user){
                         //return the user
-                        done(null, {user, token});
+                        done(null, { user, token });
                     }
                     else{
                         //create new user
@@ -36,7 +36,7 @@ export default (passport) => {
                         //generate token
                         const token = user.generateJwtToken();
                         //return user
-                        done(null, {user, token});
+                        done(null, { user, token });
                     }
                 }
                 catch (error) {

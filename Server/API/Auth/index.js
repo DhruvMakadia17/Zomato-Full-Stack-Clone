@@ -59,7 +59,7 @@ Params  none
 Access  Public
 Method  GET
 */
-Router.get("/google", passport.authenticate("google", {scope: [
+Router.get("/google", passport.authenticate("google", { scope: [
             "https://www.googleapis.com/auth/userinfo.profile", 
             "https://www.googleapis.com/auth/userinfo.email",
          ],

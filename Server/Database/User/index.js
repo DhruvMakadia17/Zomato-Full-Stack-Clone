@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.methods.generateJwtToken = function () {
-    return jwt.sign({user: this._id.toString()}, "ZomatoAPP");
+    return jwt.sign({ user: this._id.toString() }, "ZomatoAPP");
 };
 //Statics And Methods
 
@@ -47,7 +47,7 @@ UserSchema.statics.findByEmailAndPassword = async({ useremail, password }) => {
 UserSchema.pre("save", function (next){
     const user = this;
     
-    //password is mpodified
+    //password is modified
     if(!user.isModified("password")) return next();
     
     //generate bcrypt salt
