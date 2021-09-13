@@ -13,7 +13,7 @@ Params  none
 Access  Public
 Method  GET
 */
-Router.get("/", (req, res) => {
+Router.get("/", async(req, res) => {
     try{
         const { city } = req.query;
         const restaurants = await RestaurantModel.find({ city });
