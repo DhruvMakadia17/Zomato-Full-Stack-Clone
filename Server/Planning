@@ -1,11 +1,11 @@
 ##API Planning 🤯🤯
 
--Authentication
--Foods
--Restaurants
--Menu
--Order
+-Authentication ✔✔
+-Foods ✔✔
+-Restaurants ✔✔
+-Menu ✔✔
+-Order ✔
 -Payments -> Razorpay
 -Reviews
--user
--Image
+-User
+-Image ✔✔
