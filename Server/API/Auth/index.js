@@ -10,6 +10,7 @@ import { UserModel } from "../../Database/User";
 
 //Validation
 import { ValidateSignup } from "../../Validation/auth";
+import { ValidateSignin } from "../../Validation/auth";
 
 const Router  = express.Router();
 /*
@@ -49,7 +50,6 @@ Router.post("/signin", async(req, res) => {
     try{ 
         //Validate Signin
         await ValidateSignin(req.body.credentials);
-
 
         const user = await UserModel.findByEmailAndPassword(req.body.credentials);
         //generate JWT auth token 
