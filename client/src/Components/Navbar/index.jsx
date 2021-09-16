@@ -8,7 +8,7 @@ import {RiSearch2Line} from "react-icons/ri";
 
 
 const MobileNav = () => {
-    return <div className = "flex items-center justify-between md:hidden" >
+    return <div className = "flex items-center justify-between lg:hidden" >
         <div className="py-4 px-2">
             <img src = "https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" 
                 alt = "logo"
@@ -27,16 +27,17 @@ const MobileNav = () => {
 };
 
 const MediumNav = () => {
-    return ( <> 
-        <div className = "hidden gap-4 w-full items-center justify-between md:flex lg:w-3/4">
-            
+    return ( <>
+        <div className="container px-20 mx-auto" > 
+        <div className = "hidden gap-4 w-full items-center justify-around lg:flex" >
+ 
         <div className="py-4 px-2">
             <img src = "https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" 
                 alt = "logo"
                 className = "w-full h-full"
             />
         </div>
-        <div className = "flex w-fullbg-white shadow-md px-3 py-3 flex items-center gap-3 border border-gray-200 rounded">
+        <div className = "flex w-3/4 bg-white shadow-md px-3 py-3 flex items-center gap-3 border border-gray-200 rounded">
             <div className= "flex items-center gap-2 border-r-2 border-gray-300 pr-2">
                 <span className= "text-zomato-400">
                     <HiLocationMarker />
@@ -49,9 +50,10 @@ const MediumNav = () => {
                 <input type="search" placeholder="Search for restaurant, cuisines or a dish" className="w-full focus:outline-none" />
             </div>
         </div>
-        <div className="flex gap-4 lg: self-end">
+        <div className="ml-28 flex gap-4 lg: self-end">
             <button className="text-gray-500 text-xl hover:text-gray-800">Login</button>
             <button className="text-gray-500 text-xl hover:text-gray-800">Sign up</button>
+        </div>
         </div>
         </div>
     </>
