@@ -1,8 +1,16 @@
+//HOC Import
+import HomeLayoutHOC from "./HOC/Home.hoc";
+
+//Component Import 
+import Temp from "./Components/temp";
+
 
 function App() {
   return (
-    <div></div>
+  <>
+      <HomeLayoutHOC path = "/" exact component = { Temp } />
+  </>
   );
 }
 
-export default App;
+export default App; 
